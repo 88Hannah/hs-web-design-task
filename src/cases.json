@@ -1,0 +1,37 @@
+{
+    "cases": [
+
+        {
+            "id": "1",
+            "name": "Mixed",
+            "image": "Mixed.png",
+            "originalPrice": 124.88,
+            "currentPrice": 122.88
+        },
+
+        {
+            "id": "2",
+            "name": "Red",
+            "image": "Red.png",
+            "originalPrice": 122.88,
+            "currentPrice": 122.88
+        },
+
+        {
+            "id": "3",
+            "name": "White",
+            "image": "White.png",
+            "originalPrice": 128.88,
+            "currentPrice": 122.88
+        },
+
+        {
+            "id": "4",
+            "name": "Luxury",
+            "image": "Luxury.png",
+            "originalPrice": 145.38,
+            "currentPrice": 136.38
+        }
+
+    ]
+}

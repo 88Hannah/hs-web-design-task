@@ -1,11 +1,13 @@
+import Cases from './components/Cases';
+
 
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <p>A React Project</p>
-    </div>
+    <>
+      <Cases />
+    </>
   );
 }
 

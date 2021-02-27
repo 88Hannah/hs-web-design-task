@@ -12,7 +12,7 @@
             "price": 9.99,
             "totalReviews": 248,
             "buyAgainReviews": 233,
-            "numberOfBottles": 2
+            "quantity": 2
         },
         
         {
@@ -26,7 +26,7 @@
             "price": 13.49,
             "totalReviews": 200,
             "buyAgainReviews": 180,
-            "numberOfBottles": 2
+            "quantity": 2
         },
 
         {
@@ -40,7 +40,7 @@
             "price": 9.99,
             "totalReviews": 1056,
             "buyAgainReviews": 1003,
-            "numberOfBottles": 2
+            "quantity": 2
         },
 
         {
@@ -54,7 +54,7 @@
             "price": 8.99,
             "totalReviews": 81,
             "buyAgainReviews": 78,
-            "numberOfBottles": 2
+            "quantity": 2
         },
 
         {
@@ -68,7 +68,7 @@
             "price": 10.99,
             "totalReviews": 44,
             "buyAgainReviews": 42,
-            "numberOfBottles": 1
+            "quantity": 1
         },
 
         {
@@ -82,7 +82,7 @@
             "price": 8.99,
             "totalReviews": 2280,
             "buyAgainReviews": 2143,
-            "numberOfBottles": 1
+            "quantity": 1
         },
 
         {
@@ -96,7 +96,7 @@
             "price": 9.99,
             "totalReviews": 100,
             "buyAgainReviews": 94,
-            "numberOfBottles": 1
+            "quantity": 1
         },
 
         {
@@ -110,7 +110,7 @@
             "price": 9.99,
             "totalReviews": 452,
             "buyAgainReviews": 416,
-            "numberOfBottles": 1
+            "quantity": 1
         }
 
     ]

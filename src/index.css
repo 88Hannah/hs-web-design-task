@@ -1,13 +1,256 @@
-body {
+*,
+*::before,
+*::after {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font-size: 100%;
+  font-family: inherit;
+}
+
+.main-container {
+  padding: 2em 1em;
+}
+
+.case-options {
+  max-width: 641px;
+  margin: 0 auto;
+}
+
+.headline {
+  margin-bottom: 0.75rem;
+  color: rgba(0, 0, 0, 0.87);
+  letter-spacing: -1px;
+}
+
+.sub-headline {
+  font-size: 1.0625em;
+}
+
+.case-visual {
+  position: relative;
+  margin-top: 1.5rem;
+}
+
+.saving {
+  position: absolute;
+  background-color: #E57A58;
+  color: #FFFFFF;
+  width: 18.72%;
+  height: 0;
+  padding-bottom: 18.72%;
+  border-radius: 50%;
+  top: 0;
+  right: 8.89%;
+}
+
+.saving__text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-weight: 700;
+  font-size: min(2.7vw, 1.125em);
+}
+
+.saving__text--large {
+  font-size: 1.55em;
+}
+
+.select__text {
+  font-size: 1.0625em;
+}
+
+.select__buttons {
+  display: grid;
+  grid-template-columns: min-content min-content;
+  justify-items: center;
+  width: min-content;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.case-btn {
+  width: 100px;
+  border-radius: 8px;
+  padding: 0.3125rem 0; /* 0.3125rem = 5px (button is 28px high - 2px for top and bottom borders, 16px for line height, leave 10px for the total padding) */
+  margin: 1em 0.375rem; /* 1em = 13px (distance from bottom of wine image to top of buttons) 0.375rem = 6px (gives a gap of 12px between each button) */
+  color: #2661A6;
+  background-color: transparent;
+  border: #2661A6 solid 1px;
+  font-size: 0.8125rem; /* 0.8125rem = 13px */
+  font-weight: 600;
+  line-height: 1rem; /* set line height to 16px */
+  display: block;
+}
+
+.case-btn.active {
+  color: #FFFFFF;
+  background-color: #2661A6;
+}
+
+
+
+
+
+
+
+.summary-card {
+  border-radius: 10px;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  padding: 1.5rem;
+  margin-top: 2em;
+}
+
+.best-deal__title {
+  margin-bottom: 1.25em;
+}
+
+
+.best-deal__bullets {
+  list-style: none;
+  padding-left: 1.5em;
+  border-bottom: rgb(220, 220, 220) solid 1px;
+}
+
+.best-deal__bullets li {
+  position: relative;
+  font-size: 0.9375em;
+  line-height: 1.2em;
+  margin-bottom: 1.2em;
+}
+
+.best-deal__bullets li::before {
+  content: "✓";
+  position: absolute;
+  color: rgb(34, 121, 228);
+  font-size: 1rem;
+  font-weight: 700;
+  left: -1.5em;
+}
+
+.prices {
+  margin: 1.1875em 0 1em;
+}
+
+.prices__item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5em;
+  padding: 0.125em 0;
+}
+
+.prices__item--strike {
+  text-decoration: line-through;
+}
+
+.prices__item--highlight {
+  color: rgb(229, 122, 88);
+}
+
+.prices__item--bold {
+  font-weight: 700;
+}
+
+.add-to-basket {
+  font-size: 1.0625em;
+  color: #FFFFFF;
+  background-color: rgb(38, 97, 166);
+  border: none;
+  padding: 1rem 0;
+  display: block;
+  width: 100%;
+  border-radius: 8px;
+}
+
+
+.summary-card,
+.intro-text,
+.select {
+  max-width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+
+/* Increase the font size of the headline and set the buttons to sit 4 in a row */
+@media (min-width: 576px) {
+  .headline {
+    font-size: 2rem;
+  }
+
+  .select__buttons {
+    grid-template-columns: repeat(4, min-content);
+  }
+
+}
+
+
+/* Display flex to sit the two main elements of the top section side by side */
+@media (min-width: 992px) {
+  .main-container {
+    padding: 4em 2em;
+  }  
+
+  .cases {
+    display: flex;
+  }
+
+  .case-options {
+    margin-right: 7%;
+  }
+
+  .headline {
+    font-size: 2.25rem;
+  }
+
+  .sub-headline {
+    max-width: 500px;
+  }
+
+  .intro-text,
+  .select {
+    max-width: initial;
+  }
+
+  .summary-card {
+    width: 395px;
+    margin: 0 auto;
+    flex: none; /* To keep the width at 395px */
+  }
+
+  
+}
+
+
+@media (min-width: 1200px) {
+  .main-container {
+    max-width: 1178px;
+    margin: 0 auto;
+  }
+
+  .select {
+    display: flex;
+    align-items: center;
+  }
 }

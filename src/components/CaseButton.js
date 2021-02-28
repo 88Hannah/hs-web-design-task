@@ -4,14 +4,17 @@ function CaseButton({caseName, caseIndex, active, changeCase}) {
 
     const buttonClass = active ? "active" : "";
 
-    const handleClick = () => {
+    const handleClick = event => {
 
         changeCase(caseIndex);
+
+        console.log(event, event.target)
+        event.target.blur();
 
     }
 
     return (
-        <button className={buttonClass} onClick={handleClick}>{caseName}</button>
+        <button className={`case-btn ${buttonClass}`} onClick={handleClick}>{caseName}</button>
     )
 
 }

@@ -17,7 +17,7 @@ function WineCard({wineData}) {
                     <p className="quantity__text">x{wineData.quantity}</p>
                 </div>
 
-                <div className="rrecommended">
+                <div className="recommended">
                     <div className="recommended__text">
                         <p className="recommended__text-large">{percentage}%</p>
                         <p className="recommended__text-medium">of {wineData.totalReviews}</p>
@@ -29,25 +29,25 @@ function WineCard({wineData}) {
             <p className="wine-card__title">{wineData.name}</p>
 
             <div className="wine-details">
-                <div class="wine-details__item country">
+                <div className="wine-details__item country">
                     <img src="/images/Icon/Pin.svg" alt="location icon" />
                     <p>{wineData.country}</p>
                 </div>
 
-                <div class="wine-details__item style">
+                <div className="wine-details__item style">
                     <img src="/images/Icon/Glass.svg" alt="Wine glass icon" />
                     <p>{wineData.style}</p>
                 </div>
 
-                <div class="wine-details__item country">
+                <div className="wine-details__item country">
                     <img src="/images/Icon/Grape.svg" alt="Grape icon" />
                     <p>{wineData.grape}</p>
                 </div>
             </div>
 
-            <p class="wine-card__description">{wineData.description}</p>
+            <p className="wine-card__description">{wineData.description}</p>
 
-            <p class="wine-card__price">Price: £{wineData.price}</p>
+            <p className="wine-card__price">Price: £{wineData.price}</p>
 
         </div>
 

@@ -43,7 +43,7 @@ function Cases() {
                 </div>
 
                 <div className="select">
-                    <p>Choose your case</p>
+                    <p className="select__text">Choose your case</p>
                     <div className="select__buttons">
                         {caseButtons}
                     </div>

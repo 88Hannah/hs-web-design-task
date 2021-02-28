@@ -10,7 +10,6 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  padding: 1rem;
 }
 
 img {
@@ -23,8 +22,23 @@ button {
   font-family: inherit;
 }
 
+.main-container {
+  padding: 2em 1em;
+}
+
+.case-options {
+  max-width: 641px;
+  margin: 0 auto;
+}
+
 .headline {
   margin-bottom: 0.75rem;
+  color: rgba(0, 0, 0, 0.87);
+  letter-spacing: -1px;
+}
+
+.sub-headline {
+  font-size: 1.0625em;
 }
 
 .case-visual {
@@ -60,6 +74,10 @@ button {
   font-size: 1.55em;
 }
 
+.select__text {
+  font-size: 1.0625em;
+}
+
 .select__buttons {
   display: grid;
   grid-template-columns: min-content min-content;
@@ -78,7 +96,7 @@ button {
   color: #2661A6;
   background-color: transparent;
   border: #2661A6 solid 1px;
-  font-size: 0.8125em; /* 0.8125em = 13px */
+  font-size: 0.8125rem; /* 0.8125rem = 13px */
   font-weight: 600;
   line-height: 1rem; /* set line height to 16px */
   display: block;
@@ -99,6 +117,7 @@ button {
   border-radius: 10px;
   box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
   padding: 1.5rem;
+  margin-top: 2em;
 }
 
 .best-deal__title {
@@ -122,7 +141,6 @@ button {
 .best-deal__bullets li::before {
   content: "✓";
   position: absolute;
-  /* height: 100%; */
   color: rgb(34, 121, 228);
   font-size: 1rem;
   font-weight: 700;
@@ -161,4 +179,78 @@ button {
   display: block;
   width: 100%;
   border-radius: 8px;
+}
+
+
+.summary-card,
+.intro-text,
+.select {
+  max-width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+
+/* Increase the font size of the headline and set the buttons to sit 4 in a row */
+@media (min-width: 576px) {
+  .headline {
+    font-size: 2rem;
+  }
+
+  .select__buttons {
+    grid-template-columns: repeat(4, min-content);
+  }
+
+}
+
+
+/* Display flex to sit the two main elements of the top section side by side */
+@media (min-width: 992px) {
+  .main-container {
+    padding: 4em 2em;
+  }  
+
+  .cases {
+    display: flex;
+  }
+
+  .case-options {
+    margin-right: 7%;
+  }
+
+  .headline {
+    font-size: 2.25rem;
+  }
+
+  .sub-headline {
+    max-width: 500px;
+  }
+
+  .intro-text,
+  .select {
+    max-width: initial;
+  }
+
+  .summary-card {
+    width: 395px;
+    margin: 0 auto;
+    flex: none; /* To keep the width at 395px */
+  }
+
+  
+}
+
+
+@media (min-width: 1200px) {
+  .main-container {
+    max-width: 1178px;
+    margin: 0 auto;
+  }
+
+  .select {
+    display: flex;
+    align-items: center;
+  }
 }

@@ -75,3 +75,20 @@ Calculated number of customers who would buy again. The percentage can then be c
 Annoyingly "case" is a reserved JS word
 
 Remove unecessary consoles
+
+reminder of react hooks to pass state to parent: https://dev.to/pnkfluffy/passing-data-from-child-to-parent-with-react-hooks-1ji3
+
+
+Not always necessary to use the context API
+
+Removed focus from buttons using blur() at the end of the function
+
+Summary card differences:
+bullet point section of mine is 1px shorter as border is part of box.
+Could use an after element instead ...
+Margin under button on mine is 2em (same as all other sides of the card), margin on design is 28px - would question. 
+
+Spacing of select buttons - doesn't match but why is the spacing as it is? Making it match would be adding additional CSS, is this necessary? 
+
+Mobile designed with 360px in mind
+

@@ -11,7 +11,7 @@ function CaseButton({caseName, caseIndex, active, changeCase}) {
     }
 
     return (
-        <button className={buttonClass} onClick={handleClick}>{caseName}</button>
+        <button className={`case-btn ${buttonClass}`} onClick={handleClick}>{caseName}</button>
     )
 
 }

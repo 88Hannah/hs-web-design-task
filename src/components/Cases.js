@@ -36,8 +36,8 @@ function Cases() {
                     
                     <div className="saving">
                         <div className="saving__text">
-                            <p className="saving__text-small">Save</p>
-                            <p className="saving__text-large">£{moneySaved}</p>
+                            <p className="saving__text--small">Save</p>
+                            <p className="saving__text--large">£{moneySaved}</p>
                         </div>
                     </div>
                 </div>

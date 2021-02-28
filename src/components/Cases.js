@@ -12,7 +12,7 @@ function Cases() {
         setCaseData(casesData.cases[selectedCase]);
     }, [selectedCase]);
 
-    const voucher = 75;
+    const voucher = (75).toFixed(2);
     const youPay = (caseData.currentPrice - voucher).toFixed(2);
     const moneySaved = (caseData.originalPrice - youPay).toFixed(2);
     const pricePerBottle = ((Math.round((youPay / 12) * 100))/100).toFixed(2)
@@ -75,7 +75,7 @@ function Cases() {
 
                     <div className="prices__item prices__item--highlight prices__item--bold">
                         <p>Your voucher</p>
-                        <p>£{voucher}</p>
+                        <p>-£{voucher}</p>
                     </div>
 
                     <div className="prices__item prices__item--bold">

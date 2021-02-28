@@ -42,52 +42,51 @@ function Cases() {
                     </div>
                 </div>
 
-                <div className="selectCase">
+                <div className="select">
                     <p>Choose your case</p>
-                    <div className="selectCase__buttons">
+                    <div className="select__buttons">
                         {caseButtons}
                     </div>
                 </div>
             </div>
 
-            <div className="card">
+            <div className="summary-card">
                 <div className="best-deal">
                     <h2 className="best-deal__title">Always get the best deal…</h2>
-                    <div className="best-deal__bullets">
-                        <ul>
-                            <li>12 delicious wines made by award-winning winemakers - only £{pricePerBottle} per bottle</li>
-                            <li>Take the Naked taste test - try your wines over 30 days to see if we're right for you</li>
-                            <li>After 30 days, become a fully fledged Angel and get up to 33% off</li>
-                            <li>Angels save £25 into their Naked piggy bank each month, to spend whenever they want</li>
-                            <li>No membership fees or tie-ins, so you can cancel anytime at no cost</li>
-                            <li>Every wine is backed by our 100% no quibble refund guarantee</li>
-                        </ul>
-                    </div>
+                    <ul className="best-deal__bullets">
+                        <li>12 delicious wines made by award-winning winemakers - only £{pricePerBottle} per bottle</li>
+                        <li>Take the Naked taste test - try your wines over 30 days to see if we're right for you</li>
+                        <li>After 30 days, become a fully fledged Angel and get up to 33% off</li>
+                        <li>Angels save £25 into their Naked piggy bank each month, to spend whenever they want</li>
+                        <li>No membership fees or tie-ins, so you can cancel anytime at no cost</li>
+                        <li>Every wine is backed by our 100% no quibble refund guarantee</li>
+                    </ul>
                 </div>
-                <div className="summary">
-                    <div className="summary__item summary__item--strike">
+                <div className="prices">
+                    <div className="prices__item prices__item--strike">
                         <p>Was</p>
                         <p>£{caseData.originalPrice}</p>
                     </div>
 
-                    <div className="summary__item">
+                    <div className="prices__item">
                         <p>Now</p>
                         <p>£{caseData.currentPrice}</p>
                     </div>
 
-                    <div className="summary__item summary__item--highlight">
+                    <div className="prices__item prices__item--highlight prices__item--bold">
                         <p>Your voucher</p>
                         <p>£{voucher}</p>
                     </div>
 
-                    <div className="summary__item">
+                    <div className="prices__item prices__item--bold">
                         <p>You pay</p>
                         <p>£{youPay}</p>
                     </div>
 
-                    <button className="addToBasket">Add to basket</button>
-
                 </div>
+                
+                <button className="add-to-basket">Add to basket</button>
+                
             </div>
 
         </section>

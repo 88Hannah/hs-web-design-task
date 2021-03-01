@@ -11,7 +11,7 @@ function WineCard({wineData}) {
         <div className="wine-card">
 
             <div className="image-container">
-                <img src={`/images/Wine/${wineData.image}`} alt={wineData.name} style={{width: "200px"}} />
+                <img src={`/images/Wine/${wineData.image}`} alt={wineData.name}/>
                 
                 <div className="quantity">
                     <p className="quantity__text">x{wineData.quantity}</p>

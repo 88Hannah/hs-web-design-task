@@ -15,7 +15,7 @@ function Wines() {
 
             <h2 className="wines__title">Meet the 12 wines in your mixed case</h2>
 
-            <div className="wine-cards">
+            <div className="wine-cards main-carousel" data-flickity='{ "cellAlign": "left", "contain": true }'>
                 {wineCards}
             </div>
 

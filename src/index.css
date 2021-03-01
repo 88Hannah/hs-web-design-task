@@ -254,3 +254,46 @@ button {
     align-items: center;
   }
 }
+
+
+
+
+
+
+
+.wine-card {
+  width: 33.33%; /* full width */
+  height: 300px; /* height of carousel */
+  margin-right: 1.5rem;
+}
+
+.flickity-button {
+  background: transparent;
+}
+
+.flickity-prev-next-button {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.flickity-button:disabled {
+  display: none;
+}
+
+.flickity-prev-next-button.previous {
+  left: -5rem;
+}
+.flickity-prev-next-button.next {
+  right: -5rem;
+}
+
+.flickity-page-dots {
+  display: none;
+}
+
+
+/* Add a carousel :focus style style to aid accessibility. When focused, users can navigate the carousel with their keyboard. */
+/* .flickity-enabled:focus .flickity-viewport {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+} */

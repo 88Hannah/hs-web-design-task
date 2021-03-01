@@ -22,7 +22,7 @@ button {
   font-family: inherit;
 }
 
-.main-container {
+.cases {
   padding: 2em 1em;
 }
 
@@ -208,13 +208,10 @@ button {
 
 /* Display flex to sit the two main elements of the top section side by side */
 @media (min-width: 992px) {
-  .main-container {
-    padding: 4em 2em;
-  }  
-
   .cases {
+    padding: 4em 2em;
     display: flex;
-  }
+  }  
 
   .case-options {
     margin-right: 7%;
@@ -244,7 +241,7 @@ button {
 
 
 @media (min-width: 1200px) {
-  .main-container {
+  .cases {
     max-width: 1178px;
     margin: 0 auto;
   }
@@ -256,15 +253,30 @@ button {
 }
 
 
+.wines-container {
+  background-color: rgb(245, 245, 245);
+  padding: 4em 0;
+}
+
+.wines {
+  padding: 0 1em;
+}
+
+.wines__title {
+  font-size: 2.25em;
+  margin-bottom: 2.625rem;
+}
+
+.main-carousel {
+  margin-left: -1em;
+  margin-right: -1em;
+}
 
 
-
-
-
-.wine-card {
-  width: 33.33%; /* full width */
-  height: 300px; /* height of carousel */
-  margin-right: 1.5rem;
+.carousel-cell {
+  width: 80%;
+  margin-right: 1.5em;
+  height: max-content;
 }
 
 .flickity-button {
@@ -272,28 +284,176 @@ button {
 }
 
 .flickity-prev-next-button {
-  width: 2.5rem;
-  height: 2.5rem;
-}
-
-.flickity-button:disabled {
-  display: none;
-}
-
-.flickity-prev-next-button.previous {
-  left: -5rem;
-}
-.flickity-prev-next-button.next {
-  right: -5rem;
-}
-
-.flickity-page-dots {
   display: none;
 }
 
 
-/* Add a carousel :focus style style to aid accessibility. When focused, users can navigate the carousel with their keyboard. */
-/* .flickity-enabled:focus .flickity-viewport {
-  outline: thin dotted;
-  outline: 5px auto -webkit-focus-ring-color;
-} */
+
+
+@media (min-width: 992px) {
+  .main-carousel {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  .wine-card {
+    width: calc((100% - 3em) / 3);
+  }
+  
+  .flickity-button {
+    background: transparent;
+  }
+  
+  .flickity-prev-next-button {
+    display: initial;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  
+  .flickity-button:disabled {
+    display: none;
+  }
+  
+  .flickity-prev-next-button.previous {
+    left: -5rem;
+  }
+  .flickity-prev-next-button.next {
+    right: -5rem;
+  }
+  
+  .flickity-page-dots {
+    display: none;
+  }
+}
+
+
+
+
+.image-container {
+  border-radius: 18px;
+  height: 0;
+  padding-bottom: 71%;
+  overflow: hidden;
+  position: relative;
+}
+
+.image-container img {
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  
+}
+
+.quantity {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  top: 1em;
+  left: 1em;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.28);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quantity__text {
+  color: #FFFFFF;
+  font-size: 1.1875em;
+}
+
+.quantity__text--bold {
+  font-weight: 700;
+  padding-left: 0.05em;
+}
+
+.recommended {
+  position: absolute;
+  height: 85px;
+  width: 85px;
+  top: 1em;
+  right: 1em;
+  border-radius: 50%;
+  background-color: rgb(34, 121, 228);
+  padding: 0.9em 1em 0;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+}
+
+.recommended__text {
+  color: #ffffff;
+  text-align: center;
+}
+
+.recommended__text--large {
+  font-size: 1.5em;
+  font-weight: 700;
+  letter-spacing: -0.67px;
+  line-height: 1em;
+}
+
+.recommended__text--medium {
+  font-size: 0.875em;
+  font-weight: 700;
+}
+
+.recommended__text--small {
+  font-size: 0.625em;
+  line-height: 1.1em;
+}
+
+.wine-card__title {
+  font-size: 1.0625em;
+  font-weight: 500;
+  margin: 0.75rem 0;
+}
+
+
+.wine-details {
+  display: flex;
+}
+
+.wine-details__item {
+  display: flex;
+  align-items: center;
+}
+
+.wine-details__item + .wine-details__item {
+  margin-left: 1em;
+}
+
+.wine-details__item img {
+  height: 1em;
+  margin-right: 0.4em;
+}
+
+.wine-details__item p {
+  font-size: 0.75em;
+  letter-spacing: 0.4px;
+}
+
+.wine-card__description {
+  font-size: 0.9375em;
+  line-height: 1.33em;
+  margin: 0.75em 0;
+}
+
+.wine-card__price {
+  font-size: 1.0625em;
+  font-weight: 500;
+}
+
+
+
+
+
+
+
+@media (min-width: 1200px) {
+  .wines {
+    max-width: 1178px;
+    margin: 0 auto;
+  }
+}

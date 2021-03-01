@@ -8,15 +8,31 @@ function Wines() {
     const wineCards = winesData.wines.map(wine => (
         <WineCard key={wine.id} wineData={wine} />
     ));
+    
+
+    const minWidth992 = window.matchMedia('(min-width: 992px)');
+    let carousel
+
+    if (minWidth992.matches) {
+        carousel =  <div className="wine-cards main-carousel" data-flickity='{"contain" : true, "cellAlign" : "left" }'>
+                        {wineCards}
+                    </div>
+    } else {
+        carousel =  <div className="wine-cards main-carousel" data-flickity='{}'>
+                        {wineCards}
+                    </div>
+    }
 
     return (
 
-        <section className="wines">
+        <section className="wines-container">
 
-            <h2 className="wines__title">Meet the 12 wines in your mixed case</h2>
+            <div className="wines">
 
-            <div className="wine-cards main-carousel" data-flickity='{ "cellAlign": "left", "contain": true }'>
-                {wineCards}
+                <h2 className="wines__title">Meet the 12 wines in your mixed case</h2>
+
+                {carousel}
+
             </div>
 
         </section>

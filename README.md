@@ -92,3 +92,6 @@ Spacing of select buttons - doesn't match but why is the spacing as it is? Makin
 
 Mobile designed with 360px in mind
 
+Effect hook for buttons to pass data to parent: https://reactjs.org/docs/hooks-effect.html
+
+Design didn't have consistent spacing between the icon and the detail text - I have chosen to make it consistent

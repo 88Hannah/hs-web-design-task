@@ -272,12 +272,16 @@ button {
   margin-right: -1em;
 }
 
-
 .carousel-cell {
   width: min(450px, 90%);
   margin-right: calc(1.5em - max(10%, calc(100vw - 450px)));
   padding-left: max(10%, calc(100vw - 450px));
   height: max-content;
+}
+
+.carousel-cell:last-of-type {
+  padding-right: max(10%, calc(100vw - 450px));
+  width: calc( min(450px, 90%) + max(10%, calc(100vw - 450px)));
 }
 
 .flickity-button {
@@ -290,24 +294,31 @@ button {
 
 @media (min-width: 576px) {
   .carousel-cell {
-    width: min(400px, 90%);
+    width: max(320px, 40%);
     margin-right: calc(1.5em - 1em);
     padding-left: 1em;
     height: max-content;
   }
+
+  .carousel-cell:last-of-type {
+    padding-right: 1em;
+    width: calc( max(320px, 40%) + 1em);
+  }
+
+  
 }
 
 
 @media (min-width: 768px) {
 
   .carousel-cell {
-    padding-left: 1em;
     width: calc(40% + 1em);
+    padding-left: 1em;
   }
 
   .carousel-cell:last-of-type {
     padding-right: 1em;
-    width: calc(40% + 2em);
+    width: calc(40% + 1em + 1em);
   }  
 }
 
@@ -325,6 +336,7 @@ button {
   .carousel-cell,
   .carousel-cell:last-of-type {
     padding: 0;
+    margin: 0 1.5em 0 0;
     width: calc((100% - 3em) / 3);
   }
   
@@ -344,9 +356,11 @@ button {
   
   .flickity-prev-next-button.previous {
     left: -3rem;
+    top: 45%;
   }
   .flickity-prev-next-button.next {
     right: -3rem;
+    top: 45%;
   }
   
   .flickity-page-dots {
@@ -356,6 +370,7 @@ button {
 
 @media (min-width: 1200px) {
   .main-carousel {
+    width: 100%;
     margin-left: 0;
     margin-right: 0;
   }
@@ -448,15 +463,13 @@ button {
 
 .wine-details {
   display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em 1em;
 }
 
 .wine-details__item {
   display: flex;
   align-items: center;
-}
-
-.wine-details__item + .wine-details__item {
-  margin-left: 1em;
 }
 
 .wine-details__item img {

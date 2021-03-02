@@ -10,10 +10,10 @@ function Wines() {
     ));
     
 
-    const minWidth992 = window.matchMedia('(min-width: 992px)');
+    const minWidth768 = window.matchMedia('(min-width: 100px)');
     let carousel
 
-    if (minWidth992.matches) {
+    if (minWidth768.matches) {
         carousel =  <div className="wine-cards main-carousel" data-flickity='{"contain" : true, "cellAlign" : "left" }'>
                         {wineCards}
                     </div>

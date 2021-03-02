@@ -12,6 +12,10 @@ function Cases() {
         setCaseData(casesData.cases[selectedCase]);
     }, [selectedCase]);
 
+    const handleClick = event => {
+        event.target.blur();
+    }
+
     const voucher = (75).toFixed(2);
     const youPay = (caseData.currentPrice - voucher).toFixed(2);
     const moneySaved = (caseData.originalPrice - youPay).toFixed(2);
@@ -85,7 +89,7 @@ function Cases() {
 
                 </div>
                 
-                <button className="add-to-basket">Add to basket</button>
+                <button className="add-to-basket" onClick={handleClick}>Add to basket</button>
                 
             </div>
 

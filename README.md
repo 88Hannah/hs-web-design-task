@@ -92,3 +92,10 @@ Spacing of select buttons - doesn't match but why is the spacing as it is? Makin
 
 Mobile designed with 360px in mind
 
+Effect hook for buttons to pass data to parent: https://reactjs.org/docs/hooks-effect.html
+
+Design didn't have consistent spacing between the icon and the detail text - I have chosen to make it consistent
+
+Initially tried to use .wine-details__item + .wine-details__item to give margin left of 1em but this caused a problem when I changed the wine-details to flex-wrap for the few cases where the details didn't fit on one line for some of the smaller cards. The initial way left an unwanted margin to the left of the item that wrapped. Used gap instead which is now very well supported (previous advise was to not use it).
+
+Arrows are not level in the mockup

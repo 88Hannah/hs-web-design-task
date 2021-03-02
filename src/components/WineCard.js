@@ -8,20 +8,20 @@ function WineCard({wineData}) {
 
     return (
 
-        <div className="wine-card">
+        <div className="wine-card carousel-cell">
 
             <div className="image-container">
-                <img src={`/images/Wine/${wineData.image}`} alt={wineData.name} style={{width: "200px"}} />
+                <img src={`/images/Wine/${wineData.image}`} alt={wineData.name}/>
                 
                 <div className="quantity">
-                    <p className="quantity__text">x{wineData.quantity}</p>
+                    <p className="quantity__text">x<span className="quantity__text--bold">{wineData.quantity}</span></p>
                 </div>
 
                 <div className="recommended">
                     <div className="recommended__text">
-                        <p className="recommended__text-large">{percentage}%</p>
-                        <p className="recommended__text-medium">of {wineData.totalReviews}</p>
-                        <p className="recommended__text-small">would buy it again</p>
+                        <p className="recommended__text--large">{percentage}%</p>
+                        <p className="recommended__text--medium">of {wineData.totalReviews}</p>
+                        <p className="recommended__text--small">would buy it again</p>
                     </div>
                 </div>
             </div>

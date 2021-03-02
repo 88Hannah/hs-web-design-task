@@ -11,12 +11,16 @@ function Wines() {
 
     return (
 
-        <section className="wines">
+        <section className="wines-container">
 
-            <h2 className="wines__title">Meet the 12 wines in your mixed case</h2>
+            <div className="wines">
 
-            <div className="wine-cards">
-                {wineCards}
+                <h2 className="wines__title">Meet the 12 wines in your mixed case</h2>
+
+                <div className="wine-cards main-carousel" data-flickity='{"contain" : true, "cellAlign" : "left" }'>
+                    {wineCards}
+                </div>
+
             </div>
 
         </section>

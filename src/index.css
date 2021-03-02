@@ -6,10 +6,19 @@
   box-sizing: border-box;
 }
 
+:root {
+
+  --orange: rgb(229, 122, 88);
+  --dark-blue: rgb(38, 97, 166);
+  --dark-blue-code: 38, 97, 166;
+  --brand-blue: rgb(34, 121, 228);
+
+}
+
 
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Sofia-Pro', 'Poppins', sans-serif; ;
 }
 
 img {
@@ -20,6 +29,7 @@ img {
 button {
   font-size: 100%;
   font-family: inherit;
+  cursor: pointer;
 }
 
 .cases {
@@ -89,13 +99,14 @@ button {
 }
 
 .case-btn {
-  width: 100px;
+  width: 150px;
+  max-width: 40vw;
   border-radius: 8px;
-  padding: 0.3125rem 0; /* 0.3125rem = 5px (button is 28px high - 2px for top and bottom borders, 16px for line height, leave 10px for the total padding) */
+  padding: 0.6rem 0; /* 0.3125rem = 5px (button is 28px high - 2px for top and bottom borders, 16px for line height, leave 10px for the total padding) */
   margin: 1em 0.375rem; /* 1em = 13px (distance from bottom of wine image to top of buttons) 0.375rem = 6px (gives a gap of 12px between each button) */
-  color: #2661A6;
+  color: var(--dark-blue);
   background-color: transparent;
-  border: #2661A6 solid 1px;
+  border: var(--dark-blue) solid 1px;
   font-size: 0.8125rem; /* 0.8125rem = 13px */
   font-weight: 600;
   line-height: 1rem; /* set line height to 16px */
@@ -104,8 +115,14 @@ button {
 
 .case-btn.active {
   color: #FFFFFF;
-  background-color: #2661A6;
+  background-color: var(--dark-blue);
 }
+
+.case-btn:not(.active):hover {
+  color: var(--orange);
+  border-color: var(--orange);
+}
+
 
 
 
@@ -141,7 +158,7 @@ button {
 .best-deal__bullets li::before {
   content: "✓";
   position: absolute;
-  color: rgb(34, 121, 228);
+  color: var(--brand-blue);
   font-size: 1rem;
   font-weight: 700;
   left: -1.5em;
@@ -154,7 +171,7 @@ button {
 .prices__item {
   display: flex;
   justify-content: space-between;
-  font-size: 1.5em;
+  font-size: 1.2em;
   padding: 0.125em 0;
 }
 
@@ -163,7 +180,7 @@ button {
 }
 
 .prices__item--highlight {
-  color: rgb(229, 122, 88);
+  color: var(--orange);
 }
 
 .prices__item--bold {
@@ -173,12 +190,16 @@ button {
 .add-to-basket {
   font-size: 1.0625em;
   color: #FFFFFF;
-  background-color: rgb(38, 97, 166);
+  background-color: var(--dark-blue);
   border: none;
   padding: 1rem 0;
   display: block;
   width: 100%;
   border-radius: 8px;
+}
+
+.add-to-basket:hover {
+  background-color: rgba(var(--dark-blue-code), 0.9);
 }
 
 
@@ -203,6 +224,14 @@ button {
     grid-template-columns: repeat(4, min-content);
   }
 
+  .case-btn {
+    width: 100px;
+    padding: 0.3125rem 0;
+  }
+
+  .prices__item {
+    font-size: 1.5em;
+  }
 }
 
 
@@ -228,6 +257,10 @@ button {
   .intro-text,
   .select {
     max-width: initial;
+  }
+
+  .saving__text {
+    font-size: min(calc((100vw - 4em - ((100vw - 4em) * 0.07) - 395px) * 0.027), 1.125em);
   }
 
   .summary-card {
@@ -263,7 +296,7 @@ button {
 }
 
 .wines__title {
-  font-size: 2.25em;
+  font-size: 1.5em;
   margin-bottom: 2.625rem;
 }
 
@@ -425,11 +458,8 @@ button {
   top: 1em;
   right: 1em;
   border-radius: 50%;
-  background-color: rgb(34, 121, 228);
-  padding: 0.9em 1em 0;
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
+  background-color: var(--brand-blue);
+  padding: 0.9em 0.8em 0;
 }
 
 .recommended__text {
@@ -447,11 +477,14 @@ button {
 .recommended__text--medium {
   font-size: 0.875em;
   font-weight: 700;
+  letter-spacing: -0.39px; 
+  
 }
 
 .recommended__text--small {
   font-size: 0.625em;
   line-height: 1.1em;
+  letter-spacing: -0.28px;
 }
 
 .wine-card__title {
@@ -494,8 +527,17 @@ button {
 }
 
 
+@media (min-width: 576px) {
+  .wines__title {
+    font-size: 2rem;
+  }
+}
 
-
+@media (min-width: 992px) {
+  .wines__title {
+    font-size: 2.25rem;
+  }
+}
 
 
 

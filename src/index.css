@@ -1,3 +1,5 @@
+/* General Settings */
+
 *,
 *::before,
 *::after {
@@ -15,10 +17,8 @@
 
 }
 
-
-
 body {
-  font-family: 'Sofia-Pro', 'Poppins', sans-serif; ;
+  font-family: 'Sofia-Pro', 'Poppins', sans-serif; 
 }
 
 img {
@@ -32,6 +32,11 @@ button {
   cursor: pointer;
 }
 
+
+
+/* Top Section - Wine Cases */
+
+/* Text and Wine Case Creatives */
 .cases {
   padding: 2em 1em;
 }
@@ -84,6 +89,7 @@ button {
   font-size: 1.55em;
 }
 
+/* Select wine case text and buttons */
 .select__text {
   font-size: 1.0625em;
 }
@@ -123,13 +129,7 @@ button {
   border-color: var(--orange);
 }
 
-
-
-
-
-
-
-
+/* Overview summary card */
 .summary-card {
   border-radius: 10px;
   box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
@@ -140,7 +140,6 @@ button {
 .best-deal__title {
   margin-bottom: 1.25em;
 }
-
 
 .best-deal__bullets {
   list-style: none;
@@ -202,7 +201,6 @@ button {
   background-color: rgba(var(--dark-blue-code), 0.9);
 }
 
-
 .summary-card,
 .intro-text,
 .select {
@@ -212,14 +210,13 @@ button {
 }
 
 
-
-
-/* Increase the font size of the headline and set the buttons to sit 4 in a row */
+/* Media Queries for the top section */
 @media (min-width: 576px) {
   .headline {
     font-size: 2rem;
   }
 
+  /* Open out the buttons to 4 in a line rather than 2 x 2 */
   .select__buttons {
     grid-template-columns: repeat(4, min-content);
   }
@@ -235,11 +232,10 @@ button {
 }
 
 
-/* Display flex to sit the two main elements of the top section side by side */
 @media (min-width: 992px) {
   .cases {
     padding: 4em 2em;
-    display: flex;
+    display: flex; /* position the summary card next to the wine case creative */
   }  
 
   .case-options {
@@ -260,7 +256,7 @@ button {
   }
 
   .saving__text {
-    font-size: min(calc((100vw - 4em - ((100vw - 4em) * 0.07) - 395px) * 0.027), 1.125em);
+    font-size: min(calc((100vw - 4em - ((100vw - 4em) * 0.07) - 395px) * 0.028), 1.125em);
   }
 
   .summary-card {
@@ -268,14 +264,12 @@ button {
     margin: 0 auto;
     flex: none; /* To keep the width at 395px */
   }
-
-  
 }
 
 
 @media (min-width: 1200px) {
   .cases {
-    max-width: 1178px;
+    max-width: 1178px; /* The width of the content on the wire frame*/
     margin: 0 auto;
   }
 
@@ -285,6 +279,9 @@ button {
   }
 }
 
+
+
+/* Bottom section - Wine list */
 
 .wines-container {
   background-color: rgb(245, 245, 245);
@@ -300,6 +297,7 @@ button {
   margin-bottom: 2.625rem;
 }
 
+/* Additional CSS for the Flickity carousel */
 .main-carousel {
   margin-left: -1em;
   margin-right: -1em;
@@ -325,6 +323,7 @@ button {
   display: none;
 }
 
+/* Media queries for the Flickity carousel */
 @media (min-width: 576px) {
   .carousel-cell {
     width: max(320px, 40%);
@@ -337,13 +336,10 @@ button {
     padding-right: 1em;
     width: calc( max(320px, 40%) + 1em);
   }
-
-  
 }
 
 
 @media (min-width: 768px) {
-
   .carousel-cell {
     width: calc(40% + 1em);
     padding-left: 1em;
@@ -356,15 +352,12 @@ button {
 }
 
 
-
-
 @media (min-width: 992px) {
   
   .main-carousel {
     width: calc(100% - 80px);
     margin: 0 auto;
   }
-
 
   .carousel-cell,
   .carousel-cell:last-of-type {
@@ -410,8 +403,7 @@ button {
 }
 
 
-
-
+/* Individual Wine card styling */
 .image-container {
   border-radius: 18px;
   height: 0;
@@ -425,7 +417,6 @@ button {
   object-fit: cover;
   position: absolute;
   top: 0;
-  
 }
 
 .quantity {
@@ -478,7 +469,6 @@ button {
   font-size: 0.875em;
   font-weight: 700;
   letter-spacing: -0.39px; 
-  
 }
 
 .recommended__text--small {
@@ -527,6 +517,7 @@ button {
 }
 
 
+/* Media Queries for wine cards */
 @media (min-width: 576px) {
   .wines__title {
     font-size: 2rem;
@@ -538,8 +529,6 @@ button {
     font-size: 2.25rem;
   }
 }
-
-
 
 @media (min-width: 1200px) {
   .wines {

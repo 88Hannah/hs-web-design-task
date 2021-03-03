@@ -16,7 +16,8 @@ function Cases() {
         event.target.blur();
     }
 
-    const voucher = (75).toFixed(2);
+    const voucherAmount = 75;
+    const voucher = (voucherAmount).toFixed(2);
     const youPay = (caseData.currentPrice - voucher).toFixed(2);
     const moneySaved = (caseData.originalPrice - youPay).toFixed(2);
     const pricePerBottle = ((Math.round((youPay / 12) * 100))/100).toFixed(2)
@@ -31,7 +32,7 @@ function Cases() {
         <section className="cases">
             <div className="case-options">
                 <div className="intro-text">
-                    <h1 className="headline">Congratulations! You have £75 to spend on wine!</h1>
+                    <h1 className="headline">Congratulations! You have £{voucherAmount} to spend on wine!</h1>
                     <p className="sub-headline">We fund winemakers up front, so they can focus on making great wine. In return you get delicious wine at insider prices.</p>
                 </div>
             

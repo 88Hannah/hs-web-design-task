@@ -39,7 +39,7 @@ function WineCard({wineData}) {
                     <p>{wineData.style}</p>
                 </div>
 
-                <div className="wine-details__item country">
+                <div className="wine-details__item grape">
                     <img src="/images/Icon/Grape.svg" alt="Grape icon" />
                     <p>{wineData.grape}</p>
                 </div>
